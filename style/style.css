@@ -31,23 +31,36 @@ body {
   border: 5px solid black;
   margin-top: 3%;
 }
-
-.banana {
-  position: absolute;
-  font-size: 2rem;
-  animation: pular 1.2s ease-out forwards;
+button {
+  background-color: #ffd84d;
+  color: #333;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-@keyframes pular {
+button:hover {
+  background-color: #ffca2c;
+  transform: scale(1.05);
+}
+
+/* Estilo dos nerds 🤓 */
+.nerd {
+  position: absolute;
+  font-size: 2rem;
+  animation: subir 1.2s ease-out forwards;
+}
+
+@keyframes subir {
   0% {
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
     opacity: 1;
   }
-  50% {
-    transform: translateY(-80px) scale(1.2);
-  }
   100% {
-    transform: translateY(0) scale(0.8);
+    transform: translateY(-80px);
     opacity: 0;
   }
 }

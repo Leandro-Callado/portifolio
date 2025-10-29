@@ -1,27 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Botão "Embananado!"
+  const botaoNerd = document.getElementById("coletar-nerd");
+  const contadorNerd = document.getElementById("nerd-coletadas");
+  let nerds = 0;
 
-  // Botão "Coletar bananas"
-  const botaoBananas = document.getElementById("coletar-bananas");
-  const contadorBananas = document.getElementById("bananas-coletadas");
-  let bananas = 0;
+  botaoNerd.addEventListener("click", () => {
+    nerds++;
+    contadorNerd.textContent = `Nerds coletados: ${nerds}`;
 
-  botaoBananas.addEventListener("click", () => {
-    bananas++;
-    contadorBananas.textContent = `Bananas coletadas: ${bananas}`;
+    // Cria o nerd animado 🤓
+    const nerd = document.createElement("span");
+    nerd.textContent = "🤓";
+    nerd.classList.add("nerd");
 
-    // Cria uma banana animada 🍌
-    const banana = document.createElement("span");
-    banana.textContent = "";
-    banana.classList.add("banana");
+    // Posição aleatória
+    nerd.style.left = `${Math.random() * (window.innerWidth - 50)}px`;
+    nerd.style.top = `${Math.random() * (window.innerHeight - 100)}px`;
 
-    // Define posição aleatória
-    banana.style.left = `${Math.random() * window.innerWidth}px`;
-    banana.style.top = `${Math.random() * window.innerHeight}px`;
-
-    document.body.appendChild(banana);
+    document.body.appendChild(nerd);
 
     // Remove após a animação
-    setTimeout(() => banana.remove(), 1200);
+    setTimeout(() => nerd.remove(), 1200);
   });
 });
