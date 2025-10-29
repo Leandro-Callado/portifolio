@@ -1,0 +1,12 @@
+# Ignorar a pasta de dependências
+node_modules/
+
+# Ignorar arquivos de build
+dist/
+build/
+
+# Ignorar configs locais
+.env
+*.log
+.vscode/
+.jason
