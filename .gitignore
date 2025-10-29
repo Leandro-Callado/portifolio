@@ -10,3 +10,11 @@ build/
 *.log
 .vscode/
 .jason
+
+# Retirando arquivos desnecessários já versionados
+git rm -r --cached node_modules/
+git rm -r --cached .vscode/
+git rm -r --cached dist/
+git rm -r --cached build/
+git rm -r --cached .env
+git rm -r --cached .jason
